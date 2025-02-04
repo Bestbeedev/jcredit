@@ -1,0 +1,5 @@
+.active-link {
+  color: #4f46e5; /* Bleu indigo */
+  font-weight: bold;
+  border-bottom: 2px solid #4f46e5; /* Effet souligné */
+}

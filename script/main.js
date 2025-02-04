@@ -180,5 +180,29 @@
 
 
 
+    document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll(".nav-link");
 
+        // Vérifier quelle page est active au chargement
+        function setActiveLink() {
+            const currentPage = window.location.pathname;
+            links.forEach(link => {
+                if (link.getAttribute("href") === currentPage) {
+                    link.classList.add("active-link");
+                } else {
+                    link.classList.remove("active-link");
+                }
+            });
+        }
+
+        // Détecter le clic et changer l'effet
+        links.forEach(link => {
+            link.addEventListener("click", function () {
+                links.forEach(l => l.classList.remove("active-link"));
+                this.classList.add("active-link");
+            });
+        });
+
+        setActiveLink(); // Appliquer l'effet au chargement de la page
+    });
 
