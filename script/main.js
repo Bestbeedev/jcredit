@@ -206,3 +206,29 @@
         setActiveLink(); // Appliquer l'effet au chargement de la page
     });
 
+
+    ///bg change 
+
+        document.addEventListener("DOMContentLoaded", function () {
+        const heroSection = document.getElementById("hero-section");
+
+        // Tableau des images de fond
+        const bgImages = [
+            "./assets/images/hero.png",
+            "./assets/images/help-1.png",
+            "./assets/images/help-2.png"
+        ];
+
+        let index = 0;
+
+        function changeBackground() {
+            heroSection.style.backgroundImage = `url('${bgImages[index]}')`;
+            index = (index + 1) % bgImages.length; // Incrémente et boucle
+        }
+
+        // Changer toutes les 3 secondes
+        setInterval(changeBackground, 4000);
+
+        // Initialiser avec la première image
+        changeBackground();
+    });
