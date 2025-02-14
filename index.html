@@ -27,6 +27,19 @@
             });
         })();
     </script>
+
+        <!-- Script Google Translate -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                { pageLanguage: 'fr', autoDisplay: false },
+                'google_translate_element'
+            );
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    
 </head>
 
 <body class="overflow-x-hidden">
@@ -41,11 +54,11 @@
             </div>
             <div class="flex space-x-3 lg:hidden">
                 <div class="mx-4">
-                    <select  id="language-select-1"
+                    <select  id="language-select"
                         class="border border-neutral-300 bg-neutral-100 rounded-md p-2 text-gray-700">
-                        <option value="fr" selected>🇫🇷 Français</option>
+                        <option value="fr">🇫🇷 Français Mo</option>
                         <option value="en">🇬🇧 English</option>
-                        <option value="es">🇪🇸 Español</option>
+                        <option value="es">🇪🇸 Espagnol</option>
                         <option value="nl">🇳🇱 Nederlands</option>
                     </select>
                 </div>
@@ -53,24 +66,23 @@
                     class="-m-2.5 inline-flex items-center cursor-pointer  text-neutral-600 justify-center rounded-md p-2.5 text-gray-700"
                     id="mobile-menu-button">
                     <span class="sr-only">Open main menu</span>
-    
                     <i class="fas fa-bars text-neutral-600"></i>
                 </button>
     
     
             </div>
             <div class="hidden lg:flex items-center  lg:gap-x-12">
-                <a href="./index.html" class="text-sm/6 active-link font-semibold text-gray-900">Accueil</a>
+                <a data-key='title' href="./index.html" class="text-sm/6 active-link font-semibold text-gray-900">Accueil</a>
                 <a href="./loan-hypo.html" class="text-sm/6 nav-link font-semibold text-gray-900">Prêts hypothécaires</a>
                 <a href="./investment.html" class="text-sm/6 nav-link font-semibold text-gray-900">Investissements</a>
                 <a href="./about.html" class="text-sm/6 nav-link font-semibold text-gray-900">À propos</a>
-                <a href="./contact.html" class="text-sm/6 nav-link font-semibold text-gray-900">Nous contacter</a>
+                <a href="./contact.html" class="text-sm/6 nav-link font-semibold text-gray-900">Faire une demande</a>
                 <div class="mx-4">
-                    <select  id="language-select-2"
+                    <select id="language-select"
                         class="border border-neutral-300 bg-neutral-100 rounded-md p-2 text-gray-700">
-                        <option value="fr" selected>🇫🇷 Français</option>
+                        <option value="fr">🇫🇷 Française Lg</option>
                         <option value="en">🇬🇧 English</option>
-                        <option value="es">🇪🇸 Español</option>
+                        <option value="es">🇪🇸 Espagnol</option>
                         <option value="nl">🇳🇱 Nederlands</option>
                     </select>
                 </div>
@@ -109,8 +121,8 @@
                         <a href="./investment.html"
                             class="-mx-3 block nav-link rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Investissements</a>
                         <a href="/contact.html"
-                            class="-mx-3 block nav-link rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Nous
-                            contacter</a>
+                            class="-mx-3 block nav-link rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
+                            Faire une demande</a>
                     </div>
                 </div>
             </div>
@@ -120,16 +132,25 @@
 
 
 <!-- Hero section -->
-<div id="hero-section" class="w-full bg-[url('./assets/images/hero.png')] relative bg-center bg-cover transition-all duration-1000 ease-in-out px-6 lg:px-8">
+<div id="hero-section" class="w-full relative bg-center bg-cover overflow-hidden px-6 lg:px-8">
+    <!-- Sliders -->
+    <div class="absolute inset-0">
+        <div class="bg-slider active bg-[url('./assets/images/hero.png')]"></div>
+        <div class="bg-slider hidden bg-[url('./assets/images/help-1.png')]"></div>
+        <div class="bg-slider hidden bg-[url('./assets/images/help-2.png')]"></div>
+    </div>
+
+    <!-- Dégradé -->
     <div class="absolute bottom-0 inset-0 bg-gradient-to-r from-neutral-900 to-neutral-800 opacity-80"></div>
-    <div class="mx-auto max-w-2xl h-full py-20 sm:py-48 lg:py-20">
+
+    <!-- Contenu -->
+    <div class="mx-auto max-w-2xl h-full py-20 sm:py-48 lg:py-20 relative z-10">
         <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div
-                class="relative rounded-full px-3 py-1 text-sm/6 text-neutral-200 ring-1 ring-gray-200/10 hover:ring-gray-100/20">
+            <div class="relative rounded-full px-3 py-1 text-sm/6 text-neutral-200 ring-1 ring-gray-200/10 hover:ring-gray-100/20">
                 Obtenez votre prêt en toute Franchise, fiable et sécurisé avec 4% par an
             </div>
         </div>
-        <div class="text-center relative z-40">
+        <div class="text-center relative">
             <h1 class="text-5xl text-white font-semibold tracking-tight sm:text-7xl">
                 <span class="text-indigo-500">CrediZen: </span>des prêts hypothécaires faciles
             </h1>
@@ -138,15 +159,18 @@
                 et transparentes, adaptées à vos besoins financiers.
             </p>
             <div class="mt-10 flex items-center max-sm:px-12 justify-center gap-x-6">
-                <a href="./loan-hypo.html"
+                <a href="./contact.html"
                     class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                    Voir nos catégories de prêt hypothécaire
+                    Faire un demande
                     <span class="mx-2" aria-hidden="true">→</span>
                 </a>
             </div>
         </div>
     </div>
 </div>
+
+ <!-- Élément invisible de Google Translate -->
+    <div id="google_translate_element" class="hidden"></div>
 
     <!-- Features section -->
     <div class="bg-gray-50 features-section py-24 sm:py-32">
@@ -335,7 +359,7 @@
                         </dl>
                     </div>
                 </div>
-                <img src="./assets/images/loan-how.png" alt="Product screenshot"
+                <img src="https://img.freepik.com/premium-photo/hands-bribe-handshake-money-dollars-illegal-deals-lending-loan-investment-shaking-hands-bribery-cash-exchange-money-laundering-corruption-deposit-financial-payment_590464-97162.jpg?uid=R114228718&ga=GA1.1.1993014000.1739464172&semt=ais_hybrid" alt="Product screenshot"
                     class="w-[48rem] how-it-work-2 max-w-none rounded-xl ring-1 shadow-xl ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
                     width="2432" height="1442">
             </div>
@@ -648,7 +672,7 @@
                 <li>
                     <a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
                         href="./contact.html">
-                        Nous contacter
+                        Faire une demande
                     </a>
                 </li>
             </ul>
@@ -658,12 +682,12 @@
                     <a href="#"
                         class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"><i
                             class="fas fa-map-marker-alt"></i>
-                        155, rue Notre-Dame Est Montréal QC H2Y1B5 Canada
+                      1519 Rue de Calgary, Québec, QC G3K 2E9, Canada
 
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.facebook.com" rel="noreferrer" target="_blank"
+                    <a href="https://m.me/129521570254817?source=qr_link_share" rel="noreferrer" target="_blank"
                         class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75">
                         <span class="sr-only">Facebook</span>
                         <i class="fab fa-facebook size-8"></i>
@@ -774,48 +798,7 @@
 
 </script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            i18next.init({
-                lng: localStorage.getItem("selectedLanguage") || "fr",
-                resources: {
-                    en: {
-                        translation: {
-                            "Choisir une langue :": "Choose a language:",
-                            "Bienvenue sur mon site": "Welcome to my website",
-                            "Ceci est une page d'exemple avec un changement de langue automatique.": "This is a sample page with automatic language switching.",
-                            "Cliquez-moi": "Click me"
-                        }
-                    },
-                    fr: {
-                        translation: {} // Français = texte original, donc pas besoin de doublon
-                    }
-                }
-            }, function () {
-                translatePage();
-            });
 
-            function translatePage() {
-                document.querySelectorAll("*:not(script):not(style):not(meta)").forEach(element => {
-                    if (element.childNodes.length === 1 && element.childNodes[0].nodeType === 3) {
-                        let text = element.textContent.trim();
-                        if (text.length > 0 && i18next.exists(text)) {
-                            element.textContent = i18next.t(text);
-                        }
-                    }
-                });
-            }
-
-            document.getElementById("language-select-1").addEventListener("change", (e) => {
-                i18next.changeLanguage(e.target.value, () => {
-                    localStorage.setItem("selectedLanguage", e.target.value);
-                    translatePage();
-                    console.log('Onchange Select 1')
-                });
-                console.log('Onchange Select 1')
-            });
-        });
-    </script>
 </body>
 
 </html>

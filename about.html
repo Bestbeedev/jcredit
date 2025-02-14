@@ -17,6 +17,17 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <link rel="stylesheet" href="./style.css" />
+            <!-- Script Google Translate -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                { pageLanguage: 'fr', autoDisplay: false },
+                'google_translate_element'
+            );
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </head>
 
 <body class="overflow-x-hidden">
@@ -35,7 +46,7 @@
                         class="border border-neutral-300 bg-neutral-100 rounded-md p-2 text-gray-700">
                         <option value="fr" selected>🇫🇷 Français</option>
                         <option value="en">🇬🇧 English</option>
-                        <option value="es">🇪🇸 Español</option>
+                        <option value="es">🇪🇸 Espagnol</option>
                         <option value="nl">🇳🇱 Nederlands</option>
                     </select>
                 </div>
@@ -54,13 +65,13 @@
                 <a href="./loan-hypo.html" class="text-sm/6 nav-link font-semibold text-gray-900">Prêts hypothécaires</a>
                 <a href="./investment.html" class="text-sm/6 nav-link font-semibold text-gray-900">Investissements</a>
                 <a href="./about.html" class="text-sm/6  active-link font-semibold text-gray-900">À propos</a>
-                <a href="./contact.html" class="text-sm/6 nav-link font-semibold text-gray-900">Nous contacter</a>
+                <a href="./contact.html" class="text-sm/6 nav-link font-semibold text-gray-900">Faire une demande</a>
                 <div class="mx-4">
                     <select id="language-select-2"
                         class="border border-neutral-300 bg-neutral-100 rounded-md p-2 text-gray-700">
                         <option value="fr" selected>🇫🇷 Français</option>
                         <option value="en">🇬🇧 English</option>
-                        <option value="es">🇪🇸 Español</option>
+                        <option value="es">🇪🇸 Espagnol</option>
                         <option value="nl">🇳🇱 Nederlands</option>
                     </select>
                 </div>
@@ -99,8 +110,7 @@
                         <a href="./investment.html"
                             class="-mx-3 block nav-link rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Investissements</a>
                         <a href="/contact.html"
-                            class="-mx-3 block nav-link rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Nous
-                            contacter</a>
+                            class="-mx-3 block nav-link rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Faire une demande</a>
                     </div>
                 </div>
             </div>
@@ -144,7 +154,7 @@
             <div
                 class="-mt-12 -ml-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
                 <img class="w-[48rem] features-section-2 max-w-none rounded-xl bg-gray-900 ring-1 shadow-xl ring-gray-400/10 sm:w-[57rem]"
-                    src="./assets/images/about.png" alt="">
+                    src="https://img.freepik.com/free-photo/happy-couple-having-meeting-with-real-estate-agent-analyzing-blueprints-while-communicating_637285-3822.jpg?uid=R114228718&ga=GA1.1.1993014000.1739464172&semt=ais_hybrid" alt="">
             </div>
             <div
                 class="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
@@ -188,7 +198,7 @@
                             src="./assets/avatar/avatar-2.png"
                             alt="">
                         <div>
-                            <h3 class="text-base/7 font-semibold tracking-tight text-gray-900">Leslie Alexander</h3>
+                            <h3 class="text-xl font-semibold tracking-tight text-gray-900">Leslie Alexander</h3>
                             <p class="text-sm/6 font-semibold text-indigo-600">Co-Founder / CEO</p>
                         </div>
                     </div>
@@ -199,7 +209,7 @@
                              src="./assets/avatar/avatar-4.png"
                             alt="">
                         <div>
-                            <h3 class="text-base/7 font-semibold tracking-tight text-gray-900">Leslie Alexander</h3>
+                            <h3 class="text-xl font-semibold tracking-tight text-gray-900">Leslie Alexander</h3>
                             <p class="text-sm/6 font-semibold text-indigo-600">Directeur de la succursale</p>
                         </div>
                     </div>
@@ -210,7 +220,7 @@
                              src="./assets/avatar/avatar-3.png"
                             alt="">
                         <div>
-                            <h3 class="text-base/7 font-semibold tracking-tight text-gray-900">Leslie Alexander</h3>
+                            <h3 class="text-xl font-semibold tracking-tight text-gray-900">Leslie Alexander</h3>
                             <p class="text-sm/6 font-semibold text-indigo-600">Banquier hypothécaire</p>
                         </div>
                     </div>
@@ -221,7 +231,7 @@
                             src="./assets/avatar/avatar-2.png"
                             alt="">
                         <div>
-                            <h3 class="text-base/7 font-semibold tracking-tight text-gray-900">Leslie Alexander</h3>
+                            <h3 class="text-xl font-semibold tracking-tight text-gray-900">Leslie Alexander</h3>
                             <p class="text-sm/6 font-semibold text-indigo-600">Courtier hypothécaire</p>
                         </div>
                     </div>
@@ -251,8 +261,8 @@
             </div>
             <div class="mx-auto mt-16 max-w-2xl sm:mt-20 cta-section lg:mt-24 lg:max-w-4xl">
                 <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-                    <div class="relative pl-16">
-                        <dt class="text-base/7 font-semibold text-gray-900">
+                    <div class="relative  bg-neutral-100 p-6 rounded-lg  pl-16">
+                        <dt class="text-xl font-semibold text-gray-900">
                             <div
                                 class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-indigo-600">
                                 <svg class="size-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -270,8 +280,8 @@
                             des nouveautés. Les années d’expérience nous ont appris que la prévention du risque est
                             primordiale.</dd>
                     </div>
-                    <div class="relative pl-16">
-                        <dt class="text-base/7 font-semibold text-gray-900">
+                    <div class="relative bg-neutral-100 p-6 rounded-lg pl-16">
+                        <dt class="text-xl font-semibold text-gray-900">
                             <div
                                 class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-indigo-600">
                                 <svg class="size-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -289,8 +299,8 @@
                             courtiers. Nous fournissons les meilleurs services de l’industrie, et nos clients voient la
                             différence.</dd>
                     </div>
-                    <div class="relative pl-16">
-                        <dt class="text-base/7 font-semibold text-gray-900">
+                    <div class="relative  bg-neutral-100 p-6 rounded-lg  pl-16">
+                        <dt class="text-xl font-semibold text-gray-900">
                             <div
                                 class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-indigo-600">
                                 <svg class="size-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -350,17 +360,17 @@
 
 
 
-    <!-- Footer -->
+       <!-- Footer -->
     <footer class="bg-gray-100 dark:bg-gray-900">
         <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
             <div class="flex justify-center text-teal-600 dark:text-teal-300">
                 <h2 class="text-2xl text-neutral-50 font-semibold">CrediZen</h2>
             </div>
-    
+
             <p class="mx-auto mt-2 max-w-md text-center leading-relaxed text-gray-500 dark:text-gray-400">
                 Finance prêt et rapide
             </p>
-    
+
             <ul class="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
                 <li>
                     <a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
@@ -374,40 +384,40 @@
                         A propos
                     </a>
                 </li>
-    
+
                 <li>
                     <a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
                         href="./loan-hypo.html">
                         Prêts hypothécaires
                     </a>
                 </li>
-    
+
                 <li>
                     <a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
                         href="./investment.html">
                         Investissements
                     </a>
                 </li>
-    
+
                 <li>
                     <a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
                         href="./contact.html">
-                        Nous contacter
+                       Faire une demande
                     </a>
                 </li>
             </ul>
-    
+
             <ul class="mt-12 flex justify-center gap-6 md:gap-8">
                 <li class="flex space-x-2 items-center">
                     <a href="#"
                         class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"><i
                             class="fas fa-map-marker-alt"></i>
-                        155, rue Notre-Dame Est Montréal QC H2Y1B5 Canada
-    
+                      1519 Rue de Calgary, Québec, QC G3K 2E9, Canada
+
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.facebook.com" rel="noreferrer" target="_blank"
+                    <a href="https://m.me/129521570254817?source=qr_link_share" rel="noreferrer" target="_blank"
                         class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75">
                         <span class="sr-only">Facebook</span>
                         <i class="fab fa-facebook size-8"></i>
@@ -420,7 +430,7 @@
                         <i class="fas fa-phone size-8"></i>
                     </a>
                 </li>
-    
+
                 <li>
                     <a href="https://wa.me/message/YPLFYRWPYDEJJ1" rel="noreferrer" target="_blank"
                         class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75">
