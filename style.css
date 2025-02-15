@@ -95,3 +95,69 @@ body {
 }
 
 
+/* Cacher complètement le bandeau de Google Translate */
+.goog-te-banner-frame {
+    display: none !important;
+}
+body {
+    top: 0px !important;
+}
+
+/* Cacher le bouton et la barre Google Translate */
+.goog-te-gadget-simple {
+    display: none !important;
+}
+.goog-tooltip,
+.goog-tooltip:hover,
+.goog-te-balloon-frame {
+    display: none !important;
+}
+
+/* Supprimer la boîte qui affiche le texte original */
+span[data-ved],
+iframe[style*="translate.google.com"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0px !important;
+    width: 0px !important;
+    position: absolute !important;
+    z-index: -9999 !important;
+}
+
+/* Désactiver la traduction au survol */
+/* body * {
+    color: inherit !important;
+    background: inherit !important;
+    font-family: inherit !important;
+} */
+
+/* .goog-te-combo, .VIpgJd-ZVi9od-ORHb *, .VIpgJd-ZVi9od-SmfZ *, .VIpgJd-ZVi9od-xl07Ob *, .VIpgJd-ZVi9od-vH1Gmf *, .VIpgJd-ZVi9od-l9xktf * {
+   display: none !important;
+} */
+.VIpgJd-ZVi9od-ORHb-OEVmcd {
+  display: none !important;
+}
+
+.VIpgJd-yAWNEb-L7lbkb {
+  display: none !important;
+}
+
+.VIpgJd-yAWNEb-VIpgJd-fmcmS-sn54Q {
+  display: none !important;
+}
+.bbai-tooltip {
+  display: none !important;
+}
+
+.bbai-tooltip.show {
+  display: none !important;
+}
+bbai-tooltip.show {
+    opacity: 0 !important;
+    visibility: invisible !important;
+    transform: translateY(0) !important;
+}
+
+
+
