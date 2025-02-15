@@ -1,3 +1,8 @@
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+
 .active-link {
   color: #4f46e5; /* Bleu indigo */
   font-weight: bold;
@@ -28,7 +33,57 @@
     display: none !important;
 }
 
-/* Masquer le div parent du widget de traduction */
+/* Masquer la pop-up qui s'affiche au clic */
+.goog-tooltip, .goog-tooltip:hover {
+    display: none !important;
+}
+
+/* Désactiver l'ombre autour des textes traduits */
+.goog-te-balloon-frame {
+    display: none !important;
+}
+
+/* Supprimer la bordure sur les textes traduits */
+body {
+    top: 0px !important;
+}
+
+/* Masquer le logo Google en bas à droite */
+.goog-logo-link {
+    display: none !important;
+}
+
+/* Masquer le widget Google Translate flottant */
+.goog-te-gadget {
+    display: none !important;
+}
+
+/* Masquer le ruban Google Translate */
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+/* Masquer la pop-up qui s'affiche au clic */
+.goog-tooltip, .goog-tooltip:hover {
+    display: none !important;
+}
+
+/* Désactiver l'ombre autour des textes traduits */
+.goog-te-balloon-frame {
+    display: none !important;
+}
+
+/* Supprimer la bordure sur les textes traduits */
+body {
+    top: 0px !important;
+}
+
+/* Masquer le logo Google en bas à droite */
+.goog-logo-link {
+    display: none !important;
+}
+
+/* Masquer le widget Google Translate flottant */
 .goog-te-gadget {
     display: none !important;
 }
