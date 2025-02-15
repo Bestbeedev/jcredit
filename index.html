@@ -44,19 +44,19 @@
 
 <body class="overflow-x-hidden">
     <!-- Header -->
-    <header class="sticky  bg-neutral-50 shadow-lg inset-x-0 top-0 z-50">
+    <header class="sticky bg-neutral-50 shadow-lg inset-x-0 top-0 z-50">
         <nav class="flex items-center items-center justify-between p-6 lg:px-8" aria-label="Global">
             <div class="flex lg:flex-1">
                 <a href="#" class="-m-1.5 p-1.5">
-                    <span class="sr-only">Jcrédit</span>
-                    <h2 class="text-2xl text-indigo-600 font-semibold">Jcrédit</h2>
+                    <span class="sr-only">jcrédit</span>
+                    <h2 class="text-2xl text-indigo-600 font-semibold">jcrédit</h2>
                 </a>
             </div>
             <div class="flex space-x-3 lg:hidden">
                 <div class="mx-4">
-                    <select  id="language-select"
+                    <select id="language-select-1"
                         class="border border-neutral-300 bg-neutral-100 rounded-md p-2 text-gray-700">
-                        <option value="fr">🇫🇷 Français Mo</option>
+                        <option value="fr">🇫🇷 Français</option>
                         <option value="en">🇬🇧 English</option>
                         <option value="es">🇪🇸 Espagnol</option>
                         <option value="nl">🇳🇱 Nederlands</option>
@@ -66,21 +66,23 @@
                     class="-m-2.5 inline-flex items-center cursor-pointer  text-neutral-600 justify-center rounded-md p-2.5 text-gray-700"
                     id="mobile-menu-button">
                     <span class="sr-only">Open main menu</span>
+    
                     <i class="fas fa-bars text-neutral-600"></i>
                 </button>
     
     
             </div>
             <div class="hidden lg:flex items-center  lg:gap-x-12">
-                <a data-key='title' href="./index.html" class="text-sm/6 active-link font-semibold text-gray-900">Accueil</a>
-                <a href="./loan-hypo.html" class="text-sm/6 nav-link font-semibold text-gray-900">Prêts hypothécaires</a>
+                <a href="./index.html" class="text-sm/6 nav-link font-semibold text-gray-900">Accueil</a>
+                <a href="./loan-hypo.html" class="text-sm/6  active-link font-semibold text-gray-900">Prêts
+                    hypothécaires</a>
                 <a href="./investment.html" class="text-sm/6 nav-link font-semibold text-gray-900">Investissements</a>
                 <a href="./about.html" class="text-sm/6 nav-link font-semibold text-gray-900">À propos</a>
                 <a href="./contact.html" class="text-sm/6 nav-link font-semibold text-gray-900">Faire une demande</a>
                 <div class="mx-4">
                     <select id="language-select"
                         class="border border-neutral-300 bg-neutral-100 rounded-md p-2 text-gray-700">
-                        <option value="fr">🇫🇷 Française Lg</option>
+                        <option value="fr">🇫🇷 Français</option>
                         <option value="en">🇬🇧 English</option>
                         <option value="es">🇪🇸 Espagnol</option>
                         <option value="nl">🇳🇱 Nederlands</option>
@@ -111,18 +113,18 @@
                     <div class="-my-6 divide-y divide-gray-500/10">
                         <div class="space-y-2 py-6"></div>
                         <a href="./index.html"
-                            class="-mx-3 block active-link rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Accueil</a>
+                            class="-mx-3 block nav-link rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Accueil</a>
                         <a href="./about.html"
                             class="-mx-3 block nav-link rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">A
                             Propos</a>
                         <a href="/loan-hypo.html"
-                            class="-mx-3 block nav-link rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Prêts
+                            class="-mx-3 block  active-link rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Prêts
                             hypothécaires</a>
                         <a href="./investment.html"
                             class="-mx-3 block nav-link rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Investissements</a>
                         <a href="/contact.html"
-                            class="-mx-3 block nav-link rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
-                            Faire une demande</a>
+                            class="-mx-3 block nav-link rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Faire
+                            une demande</a>
                     </div>
                 </div>
             </div>
@@ -132,7 +134,7 @@
 
 
 <!-- Hero section -->
-<div id="hero-section" class="w-full relative bg-center bg-cover overflow-hidden px-6 lg:px-8">
+<div id="hero-section" class="w-full z-10 relative bg-center bg-cover overflow-hidden px-6 lg:px-8">
     <!-- Sliders -->
     <div class="absolute inset-0">
         <div class="bg-slider active bg-[url('./assets/images/hero.png')]"></div>
@@ -141,7 +143,7 @@
     </div>
 
     <!-- Dégradé -->
-    <div class="absolute bottom-0 inset-0 bg-gradient-to-r from-neutral-900 to-neutral-800 opacity-80"></div>
+    <div class="absolute overflow-x-hidden bottom-0 inset-0 bg-gradient-to-r from-neutral-900 to-neutral-800 opacity-80"></div>
 
     <!-- Contenu -->
     <div class="mx-auto max-w-2xl h-full py-20 sm:py-48 lg:py-20 relative z-10">
@@ -173,7 +175,7 @@
     <div id="google_translate_element" class="hidden"></div>
 
     <!-- Features section -->
-    <div class="bg-gray-50 features-section py-24 sm:py-32">
+    <div class="bg-gray-50 features-section py-24 sm:py-32 overflow-x-hidden">
         <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
             <h2 class="text-center text-base/7 font-semibold text-indigo-600">Découvrez</h2>
             <p
@@ -369,7 +371,7 @@
     <!---Testimonials--->
 
     <section class="bg-neutral-50">
-        <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+        <div class="mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
             <h2
                 class="text-3xl text-center mb-4 font-semibold custom tracking-tight text-pretty text-gray-900 sm:text-4xl">
                 Lisez les avis de nos clients de confiance
@@ -606,13 +608,13 @@
 
     <!-- CTA section -->
 <div class="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32">
-    <div class="mx-auto text-center mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="mx-auto grid max-w-6xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none ">
+    <div class="mx-auto text-center max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto grid max-w-6xl grid-cols-1 gap-x-4 gap-y-8 sm:gap-x-8 sm:gap-y-16 lg:max-w-none">
             <div class="max-w-xl mx-auto lg:max-w-3xl">
-                <h2 class="text-4xl font-semibold tracking-tight text-center text-white">S'incrire a notre newsletter</h2>
-                <p class="mt-4 text-lg text-gray-300">Abonnez-vous à notre newsletter pour recevoir des mises à jour régulières et des informations exclusives directement dans votre boîte de réception.</p>
-                <form id="newsletter-form" class="mt-6 flex max-w-md mx-auto gap-x-4">
-                    <label for="email-address" class="sr-only">Email addresse</label>
+                <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-center text-white">S'inscrire à notre newsletter</h2>
+                <p class="mt-4 text-base sm:text-lg text-gray-300">Abonnez-vous à notre newsletter pour recevoir des mises à jour régulières et des informations exclusives directement dans votre boîte de réception.</p>
+                <form id="newsletter-form" class="mt-6 flex flex-col sm:flex-row max-w-md mx-auto gap-y-4 sm:gap-x-4">
+                    <label for="email-address" class="sr-only">Email address</label>
                     <input id="email-address" name="email" type="email" autocomplete="email" required
                         class="min-w-0 flex-auto rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
                         placeholder="email">
@@ -623,7 +625,7 @@
         </div>
     </div>
     <div class="absolute top-0 left-1/2 -z-10 -translate-x-1/2 blur-3xl xl:-top-6" aria-hidden="true">
-        <div class="aspect-1155/678 w-[72.1875rem] bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
+        <div class="aspect-1155/678 w-full max-w-[72.1875rem] bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
             style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
         </div>
     </div>
@@ -631,7 +633,7 @@
 
 
     <!-- Footer -->
-    <footer class="bg-gray-100 dark:bg-gray-900">
+    <footer class="bg-gray-100 dark:bg-gray-800">
         <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
             <div class="flex justify-center text-teal-600 dark:text-teal-300">
                 <h2 class="text-2xl text-neutral-50 font-semibold">Jcrédit</h2>
