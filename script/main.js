@@ -101,69 +101,92 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(changeBackground, 6000);
 });
 
-// Ajoute un écouteur d'événement pour le chargement du DOM
 document.addEventListener("DOMContentLoaded", function () {
-    const selects = document.querySelectorAll("#language-select, #language-select-1");
+  const selects = document.querySelectorAll(
+    "#language-select, #language-select-1"
+  );
+  let retryCount = 0; // Compteur de tentatives
+  const maxRetries = 10; // Limite de tentatives pour éviter la boucle infinie
 
-    function changeLanguage(lang) {
-        localStorage.setItem("preferredLanguage", lang); // Sauvegarde la langue
+  function changeLanguage(lang) {
+    localStorage.setItem("preferredLanguage", lang); // Sauvegarde la langue
 
-        const googleTranslateCombo = document.querySelector(".goog-te-combo");
-        if (googleTranslateCombo) {
-            googleTranslateCombo.value = lang;
-            googleTranslateCombo.dispatchEvent(new Event("change"));
-        } else {
-            console.warn("Google Translate n'est pas encore chargé...");
-            setTimeout(() => changeLanguage(lang), 500);
-        }
-
-        // Synchroniser les deux selects
-        selects.forEach((select) => {
-            select.value = lang;
-        });
-
-        // Supprimer le ruban Google Translate et les pop-ups
-        setTimeout(() => {
-            document.querySelectorAll(".goog-te-banner-frame, .goog-tooltip, .goog-te-balloon-frame").forEach((el) => {
-                el.remove();
-            });
-            document.body.style.top = "0px";
-        }, 1000);
+    const googleTranslateCombo = document.querySelector(".goog-te-combo");
+    if (googleTranslateCombo) {
+      if (googleTranslateCombo.value !== lang) {
+        // Évite les changements répétés
+        googleTranslateCombo.value = lang;
+        googleTranslateCombo.dispatchEvent(new Event("change"));
+      }
+    } else {
+      if (retryCount < maxRetries) {
+        console.warn(
+          "Google Translate n'est pas encore chargé... Tentative",
+          retryCount + 1
+        );
+        retryCount++;
+        setTimeout(() => changeLanguage(lang), 500); // Réessaie après 500ms
+      } else {
+        console.error(
+          "Google Translate ne s'est pas chargé après plusieurs tentatives."
+        );
+      }
+      return;
     }
 
-    // Appliquer la langue sauvegardée au chargement de la page
-    const savedLanguage = localStorage.getItem("preferredLanguage");
-    if (savedLanguage) {
-        changeLanguage(savedLanguage);
-    }
-
-    // Écouter le changement sur les deux selects
+    // Synchroniser les selects
     selects.forEach((select) => {
-        select.addEventListener("change", (e) => {
-            changeLanguage(e.target.value);
-        });
+      select.value = lang;
     });
+
+    // Supprimer le ruban et les popups de Google Translate
+    setTimeout(() => {
+      document
+        .querySelectorAll(
+          ".goog-te-banner-frame, .goog-tooltip, .goog-te-balloon-frame"
+        )
+        .forEach((el) => {
+          el.remove();
+        });
+      document.body.style.top = "0px";
+    }, 1000);
+  }
+
+  // Appliquer la langue sauvegardée au chargement de la page
+  const savedLanguage = localStorage.getItem("preferredLanguage");
+  if (savedLanguage) {
+    setTimeout(() => changeLanguage(savedLanguage), 500); // Petit délai pour éviter la boucle
+  }
+
+  // Écouter le changement sur les selects
+  selects.forEach((select) => {
+    select.addEventListener("change", (e) => {
+      changeLanguage(e.target.value);
+    });
+  });
+
+  // Supprimer le bandeau et les tooltips de Google Translate
+  function removeGoogleTranslateUI() {
+    document
+      .querySelectorAll(
+        ".goog-te-banner-frame, .goog-tooltip, .goog-te-balloon-frame"
+      )
+      .forEach((el) => {
+        el.remove();
+      });
+    document.body.style.top = "0px"; // Empêcher Google de décaler la page
+  }
+
+  // Observer le DOM pour supprimer ces éléments indésirables
+  const observer = new MutationObserver(removeGoogleTranslateUI);
+  observer.observe(document.body, { childList: true, subtree: true });
+
+  // Exécuter immédiatement
+  removeGoogleTranslateUI();
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Supprimer le bandeau et le tooltip de traduction
-    function removeGoogleTranslateUI() {
-        const googleBanner = document.querySelector(".goog-te-banner-frame");
-        const googleTooltip = document.querySelector("iframe[style*='translate.google.com']");
 
-        if (googleBanner) googleBanner.remove();
-        if (googleTooltip) googleTooltip.remove();
 
-        document.body.style.top = "0px"; // Empêcher Google de décaler la page
-    }
-
-    // Observer les changements dans le DOM pour supprimer les éléments de traduction
-    const observer = new MutationObserver(removeGoogleTranslateUI);
-    observer.observe(document.body, { childList: true, subtree: true });
-
-    // Appel immédiat pour s'assurer que les éléments sont supprimés dès leur apparition
-    removeGoogleTranslateUI();
-});
 
 // document.addEventListener("DOMContentLoaded", function () {
 //     // Cibler l'élément <html>

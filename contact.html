@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="utf-8" />
@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="./script/form.js" defer></script>
+    <script src="./script/main.js" defer></script>
     <link rel="stylesheet" href="./style.css" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
@@ -27,17 +28,17 @@
             });
         })();
     </script>
-            <!-- Script Google Translate -->
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement(
-                { pageLanguage: 'fr', autoDisplay: false },
-                'google_translate_element'
-            );
-        }
-    </script>
-    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
+        <!-- Script Google Translate -->
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement(
+                    { pageLanguage: 'fr', autoDisplay: false },
+                    'google_translate_element'
+                );
+            }
+        </script>
+        <script type="text/javascript"
+            src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 
 <body class="overflow-x-hidden">
@@ -55,7 +56,7 @@
                     <select id="language-select-1"
                         class="border border-neutral-300 bg-neutral-100 rounded-md p-2 text-gray-700">
                         <option value="fr">🇫🇷 Français</option>
-                        <option value="en">🇬🇧 English</option>
+                        <option value="en">🇬🇧 Anglais</option>
                         <option value="es">🇪🇸 Espagnol</option>
                         <option value="nl">🇳🇱 Nederlands</option>
                     </select>
@@ -78,7 +79,7 @@
                 <a href="./about.html" class="text-sm/6 nav-link font-semibold text-gray-900">À propos</a>
                 <a href="./contact.html" class="text-sm/6  active-link font-semibold text-gray-900">Faire une demande</a>
                 <div class="mx-4">
-                    <select id="language-select-2"
+                    <select id="language-select"
                         class="border border-neutral-300 bg-neutral-100 rounded-md p-2 text-gray-700">
                         <option value="fr">🇫🇷 Français</option>
                         <option value="en">🇬🇧 English</option>
