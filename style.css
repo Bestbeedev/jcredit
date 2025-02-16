@@ -14,23 +14,27 @@ body {
   color: #4f46e5; /* Bleu indigo */
   font-weight: bold;
 }
-  .bg-slider {
+
+
+.bg-slider {
     position: absolute;
     inset: 0;
     background-size: cover;
     background-position: center;
-    transition: transform 1s ease-in-out, opacity 0.8s ease-in-out;
-  }
-
-  .bg-slider.hidden {
+    transition: transform 1.5s ease-in-out, opacity 1s ease-in-out;
     opacity: 0;
-    transform: translateX(-100%);
-  }
+    transform: translateX(100%); /* ✅ L'image commence toujours à droite */
+}
 
-  .bg-slider.active {
+.bg-slider.active {
     opacity: 1;
-    transform: translateX(0);
-  }
+    transform: translateX(0); /* ✅ L'image arrive au centre */
+}
+
+.bg-slider.previous {
+    opacity: 0;
+    transform: translateX(-100%); /* ✅ L'image sort toujours vers la gauche */
+}
 
  
 
@@ -125,16 +129,6 @@ iframe[style*="translate.google.com"] {
     z-index: -9999 !important;
 }
 
-/* Désactiver la traduction au survol */
-/* body * {
-    color: inherit !important;
-    background: inherit !important;
-    font-family: inherit !important;
-} */
-
-/* .goog-te-combo, .VIpgJd-ZVi9od-ORHb *, .VIpgJd-ZVi9od-SmfZ *, .VIpgJd-ZVi9od-xl07Ob *, .VIpgJd-ZVi9od-vH1Gmf *, .VIpgJd-ZVi9od-l9xktf * {
-   display: none !important;
-} */
 .VIpgJd-ZVi9od-ORHb-OEVmcd {
   display: none !important;
 }

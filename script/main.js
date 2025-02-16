@@ -72,34 +72,35 @@ document.addEventListener("DOMContentLoaded", function () {
     setActiveLink(); // Appliquer l'effet au chargement de la page
 });
 
-// Ajoute un écouteur d'événement pour le chargement du DOM
 document.addEventListener("DOMContentLoaded", function () {
-    const slides = document.querySelectorAll(".bg-slider");
-    let index = 0;
+  const slides = document.querySelectorAll(".bg-slider");
+  let index = 0;
 
-    // Fonction pour changer l'arrière-plan
-    function changeBackground() {
-        slides.forEach((slide, i) => {
-            slide.classList.remove("active", "hidden");
-            if (i === index) {
-                slide.classList.add("active");
-            } else {
-                slide.classList.add("hidden");
-            }
-        });
+  function changeBackground() {
+    const current = slides[index];
+    const nextIndex = (index + 1) % slides.length;
+    const next = slides[nextIndex];
 
-        index = (index + 1) % slides.length;
-    }
+    // 🔹 Réinitialiser toutes les classes
+    slides.forEach((slide) => slide.classList.remove("active", "previous"));
 
-    // Précharger les images pour éviter le flash gris
-    slides.forEach(slide => {
-        const img = new Image();
-        img.src = slide.style.backgroundImage.replace('url("', '').replace('")', '');
-    });
+    // 🔹 Mettre l'image actuelle en "previous" (elle sort vers la gauche)
+    current.classList.add("previous");
 
-    // Changer l'image toutes les 6 secondes
-    setInterval(changeBackground, 6000);
+    // 🔹 Mettre la prochaine image en "active" (elle entre depuis la droite)
+    next.classList.add("active");
+
+    // 🔹 Mettre à jour l'index pour la prochaine transition
+    index = nextIndex;
+  }
+
+  // ⏳ Démarrer le slider toutes les 6 secondes
+  setInterval(changeBackground, 6000);
 });
+
+
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const selects = document.querySelectorAll(
