@@ -4,40 +4,38 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+    <meta name="description" content="Découvrez notre histoire, notre équipe et pourquoi nous choisir pour vos besoins financiers." />
+    <meta name="author" content="jcrédit" />
     <link href="https://fonts.googleapis.com/css?family=Inter:100,300,400,500,700,900" rel="stylesheet" />
     <script src="/script/main.js" defer></script>
-    <title>About</title>
+    <title>À propos de jcrédit - Notre histoire et notre équipe</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <link rel="stylesheet" href="./style.css" />
-        <!-- Script Google Translate -->
-        <script type="text/javascript">
-            function googleTranslateElementInit() {
-                new google.translate.TranslateElement(
-                    { pageLanguage: 'fr', autoDisplay: false },
-                    'google_translate_element'
-                );
-            }
-        </script>
-        <script type="text/javascript"
-            src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <!-- Script Google Translate -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                { pageLanguage: 'fr', autoDisplay: false },
+                'google_translate_element'
+            );
+        }
+    </script>
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 
 <body class="overflow-x-hidden">
     <!-- Header -->
-    <header class="sticky  bg-neutral-50 shadow-lg inset-x-0 top-0 z-50">
-        <nav class="flex items-center items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <header class="sticky bg-neutral-50 shadow-lg inset-x-0 top-0 z-50">
+        <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
             <div class="flex lg:flex-1">
-                <a href="#" class="-m-1.5 p-1.5">
+                <a href="./index.html" class="-m-1.5 p-1.5">
                     <span class="sr-only">jcrédit</span>
-                    <h2 class="text-2xl text-indigo-600 font-semibold">jcrédit</h2>
+                    <h1 class="text-2xl text-indigo-600 font-semibold">jcrédit</h1>
                 </a>
             </div>
             <div class="flex space-x-3 lg:hidden">
@@ -51,21 +49,18 @@
                     </select>
                 </div>
                 <button type="button"
-                    class="-m-2.5 inline-flex items-center cursor-pointer  text-neutral-600 justify-center rounded-md p-2.5 text-gray-700"
+                    class="-m-2.5 inline-flex items-center cursor-pointer text-neutral-600 justify-center rounded-md p-2.5 text-gray-700"
                     id="mobile-menu-button">
                     <span class="sr-only">Open main menu</span>
-    
                     <i class="fas fa-bars text-neutral-600"></i>
                 </button>
-    
-    
             </div>
-            <div class="hidden lg:flex items-center  lg:gap-x-12">
-                <a href="./index.html" class="text-sm/6 nav-link font-semibold text-gray-900">Accueil</a>
-                <a href="./loan-hypo.html" class="text-sm/6 nav-link font-semibold text-gray-900">Prêts hypothécaires</a>
-                <a href="./investment.html" class="text-sm/6 nav-link font-semibold text-gray-900">Investissements</a>
-                <a href="./about.html" class="text-sm/6  active-link font-semibold text-gray-900">À propos</a>
-                <a href="./contact.html" class="text-sm/6 nav-link font-semibold text-gray-900">Faire une demande</a>
+            <div class="hidden lg:flex items-center lg:gap-x-12">
+                <a href="./index.html" class="text-sm nav-link font-semibold text-gray-900">Accueil</a>
+                <a href="./loan-hypo.html" class="text-sm nav-link font-semibold text-gray-900">Prêts hypothécaires</a>
+                <a href="./investment.html" class="text-sm nav-link font-semibold text-gray-900">Investissements</a>
+                <a href="./about.html" class="text-sm active-link font-semibold text-gray-900">À propos</a>
+                <a href="./contact.html" class="text-sm nav-link font-semibold text-gray-900">Faire une demande</a>
                 <div class="mx-4">
                     <select id="language-select"
                         class="border border-neutral-300 bg-neutral-100 rounded-md p-2 text-gray-700">
@@ -78,19 +73,19 @@
             </div>
         </nav>
         <!-- Mobile menu, show/hide based on menu open state. -->
-        <div class="lg:hidden  hidden" role="dialog" aria-modal="true" id="mobile-menu">
+        <div class="lg:hidden hidden" role="dialog" aria-modal="true" id="mobile-menu">
             <!-- Background backdrop, show/hide based on slide-over state. -->
             <div class="fixed inset-0 z-50"></div>
             <div
                 class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                 <div class="flex items-center justify-between">
                     <a href="#" class="-m-1.5 p-1.5">
-                        <span class="sr-only">Your Company</span>
+                        <span class="sr-only">jcrédit</span>
                         <img class="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-                            alt="" />
+                            alt="jcrédit logo" />
                     </a>
                     <button type="button"
-                        class="-m-2.5 bg-neutral-200 cursor-pointer  border-neutral-400  rounded-md p-2 px-4 text-gray-700 text-neutral-600"
+                        class="-m-2.5 bg-neutral-200 cursor-pointer border-neutral-400 rounded-md p-2 px-4 text-gray-700 text-neutral-600"
                         id="close-mobile-menu">
                         <span class="sr-only">Close menu</span>
                         <i class="fas fa-times text-neutral-600"></i>
@@ -100,27 +95,23 @@
                     <div class="-my-6 divide-y divide-gray-500/10">
                         <div class="space-y-2 py-6"></div>
                         <a href="./index.html"
-                            class="-mx-3 block nav-link rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Accueil</a>
+                            class="-mx-3 block nav-link rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50">Accueil</a>
                         <a href="./about.html"
-                            class="-mx-3 block active-link rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">A
-                            Propos</a>
+                            class="-mx-3 block active-link rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50">À propos</a>
                         <a href="/loan-hypo.html"
-                            class="-mx-3 block nav-link rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Prêts
-                            hypothécaires</a>
+                            class="-mx-3 block nav-link rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50">Prêts hypothécaires</a>
                         <a href="./investment.html"
-                            class="-mx-3 block nav-link rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Investissements</a>
+                            class="-mx-3 block nav-link rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50">Investissements</a>
                         <a href="/contact.html"
-                            class="-mx-3 block nav-link rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Faire une demande</a>
+                            class="-mx-3 block nav-link rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50">Faire une demande</a>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
     </header>
 
-
     <!-- About us -->
-    <div class="relative isolate overflow-hidden bg-white px-4 py-16 sm:py-24 lg:overflow-visible lg:px-0 flex items-center justify-center min-h-screen">
+    <section class="relative isolate overflow-hidden bg-white px-4 py-16 sm:py-24 lg:overflow-visible lg:px-0 flex items-center justify-center min-h-screen">
         <div class="absolute inset-0 -z-10 overflow-hidden">
             <svg class="absolute top-0 left-1/2 h-[32rem] w-[64rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_top,white,transparent)]"
                 aria-hidden="true">
@@ -140,8 +131,8 @@
                 <div class="lg:pr-2 features-section-3">
                     <div class="lg:max-w-md">
                         <p class="text-base font-semibold text-indigo-600">Découvrez</p>
-                        <h1 class="mt-2 text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-4xl">
-                            Notre histoire</h1>
+                        <h2 class="mt-2 text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-4xl">
+                            Notre histoire</h2>
                         <p class="mt-4 text-lg text-gray-700">Un bref résumé de notre histoire</p>
                     </div>
                 </div>
@@ -149,7 +140,7 @@
             <div
                 class="-mt-6 -ml-6 p-6 lg:sticky lg:top-2 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
                 <img class="w-full max-w-none rounded-xl bg-gray-900 ring-1 shadow-xl ring-gray-400/10"
-                    src="https://img.freepik.com/free-photo/happy-couple-having-meeting-with-real-estate-agent-analyzing-blueprints-while-communicating_637285-3822.jpg?uid=R114228718&ga=GA1.1.1993014000.1739464172&semt=ais_hybrid" alt="">
+                    src="https://img.freepik.com/free-photo/happy-couple-having-meeting-with-real-estate-agent-analyzing-blueprints-while-communicating_637285-3822.jpg?uid=R114228718&ga=GA1.1.1993014000.1739464172&semt=ais_hybrid" alt="Happy couple having a meeting with real estate agent">
             </div>
             <div
                 class="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-4xl lg:grid-cols-2 lg:gap-x-4 lg:px-4">
@@ -174,27 +165,26 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- members -->
-
-    <div class="bg-neutral-100 py-24 sm:py-32">
-        <div class="mx-auto grid max-w-7xl mx-auto  grid-cols-1 gap-20 px-6 lg:px-8 xl:grid-cols-3">
-            <div class="w-full  text-center ">
+    <section class="bg-neutral-100 py-24 sm:py-32">
+        <div class="mx-auto grid max-w-7xl grid-cols-1 gap-20 px-6 lg:px-8 xl:grid-cols-3">
+            <div class="w-full text-center">
                 <h2 class="text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-4xl">Notre équipe
                 </h2>
-                <p class="mt-6 text-lg/8 text-gray-600">Rencontrez les personnes qui rendent notre entreprise
+                <p class="mt-6 text-lg text-gray-600">Rencontrez les personnes qui rendent notre entreprise
                     exceptionnelle.</p>
             </div>
-            <ul role="list" class="grid gap-x-8 mx-auto max-w-4xl cta-section  gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
+            <ul role="list" class="grid gap-x-8 mx-auto max-w-4xl cta-section gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
                 <li>
                     <div class="flex items-center gap-x-6">
                         <img class="size-16 rounded-full"
                             src="./assets/avatar/avatar-2.png"
-                            alt="">
+                            alt="Leslie Alexander">
                         <div>
                             <h3 class="text-xl font-semibold tracking-tight text-gray-900">Leslie Alexander</h3>
-                            <p class="text-sm/6 font-semibold text-indigo-600">Co-Founder / CEO</p>
+                            <p class="text-sm font-semibold text-indigo-600">Co-Founder / CEO</p>
                         </div>
                     </div>
                 </li>
@@ -202,10 +192,10 @@
                     <div class="flex items-center gap-x-6">
                         <img class="size-16 rounded-full"
                              src="./assets/avatar/avatar-4.png"
-                            alt="">
+                            alt="Leslie Alexander">
                         <div>
                             <h3 class="text-xl font-semibold tracking-tight text-gray-900">Leslie Alexander</h3>
-                            <p class="text-sm/6 font-semibold text-indigo-600">Directeur de la succursale</p>
+                            <p class="text-sm font-semibold text-indigo-600">Directeur de la succursale</p>
                         </div>
                     </div>
                 </li>
@@ -213,10 +203,10 @@
                     <div class="flex items-center gap-x-6">
                         <img class="size-16 rounded-full"
                              src="./assets/avatar/avatar-3.png"
-                            alt="">
+                            alt="Leslie Alexander">
                         <div>
                             <h3 class="text-xl font-semibold tracking-tight text-gray-900">Leslie Alexander</h3>
-                            <p class="text-sm/6 font-semibold text-indigo-600">Banquier hypothécaire</p>
+                            <p class="text-sm font-semibold text-indigo-600">Banquier hypothécaire</p>
                         </div>
                     </div>
                 </li>
@@ -224,39 +214,32 @@
                     <div class="flex items-center gap-x-6">
                         <img class="size-16 rounded-full"
                             src="./assets/avatar/avatar-2.png"
-                            alt="">
+                            alt="Leslie Alexander">
                         <div>
                             <h3 class="text-xl font-semibold tracking-tight text-gray-900">Leslie Alexander</h3>
-                            <p class="text-sm/6 font-semibold text-indigo-600">Courtier hypothécaire</p>
+                            <p class="text-sm font-semibold text-indigo-600">Courtier hypothécaire</p>
                         </div>
                     </div>
                 </li>
-
-                <!-- More people... -->
             </ul>
         </div>
-    </div>
-
-
-
-
+    </section>
 
     <!--Why us-->
-
-    <div class="bg-neutral-50 py-24 sm:py-32">
+    <section class="bg-neutral-50 py-24 sm:py-32">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <div class="mx-auto max-w-2xl lg:text-center ">
-                <h2 class="text-base/7 font-semibold text-indigo-600">Découvrez</h2>
+            <div class="mx-auto max-w-2xl lg:text-center">
+                <h2 class="text-base font-semibold text-indigo-600">Découvrez</h2>
                 <p
                     class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl lg:text-balance">
                     Pourquoi nous choisir?</p>
-                <p class="mt-6 text-lg/8 text-gray-600">Chez jcrédit, nous offrons des solutions financières sur
+                <p class="mt-6 text-lg text-gray-600">Chez jcrédit, nous offrons des solutions financières sur
                     mesure avec transparence et intégrité. Faites-nous confiance pour un accompagnement professionnel et
                     personnalisé.</p>
             </div>
-            <div class="mx-auto mt-16 cta-section-2 max-w-2xl sm:mt-20  lg:mt-24 lg:max-w-4xl">
+            <div class="mx-auto mt-16 cta-section-2 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
                 <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-                    <div class="relative  bg-neutral-100 p-6 rounded-lg  pl-16">
+                    <div class="relative bg-neutral-100 p-6 rounded-lg pl-16">
                         <dt class="text-xl font-semibold text-gray-900">
                             <div
                                 class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-indigo-600">
@@ -268,7 +251,7 @@
                             </div>
                             Crédit, espèces, chèques acceptés
                         </dt>
-                        <dd class="mt-2 text-base/7 text-gray-600">Nous travaillons sans relâche pour faire toutes les
+                        <dd class="mt-2 text-base text-gray-600">Nous travaillons sans relâche pour faire toutes les
                             démarches pour assurer à nos clients un service exemplaire. Le
                             secteur des emprunts et des prêts immobiliers n'est pas simple, c’est pourquoi nous nous
                             efforçons de rester informés
@@ -287,14 +270,14 @@
                             </div>
                             Des prix compétitifs
                         </dt>
-                        <dd class="mt-2 text-base/7 text-gray-600">Nous développons de vraies relations avec tous nos
+                        <dd class="mt-2 text-base text-gray-600">Nous développons de vraies relations avec tous nos
                             clients. Dès qu'un client entre chez jcrédit, nous le traitons
                             comme un membre de notre famille. Nos clients ne se sentent jamais seuls quand ils
                             collaborent avec l’un de nos dévoués
                             courtiers. Nous fournissons les meilleurs services de l’industrie, et nos clients voient la
                             différence.</dd>
                     </div>
-                    <div class="relative  bg-neutral-100 p-6 rounded-lg  pl-16">
+                    <div class="relative bg-neutral-100 p-6 rounded-lg pl-16">
                         <dt class="text-xl font-semibold text-gray-900">
                             <div
                                 class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-indigo-600">
@@ -306,7 +289,7 @@
                             </div>
                             Garantie 1 an
                         </dt>
-                        <dd class="mt-2 text-base/7 text-gray-600">Nos courtiers expérimentés ont aidé les habitants de
+                        <dd class="mt-2 text-base text-gray-600">Nos courtiers expérimentés ont aidé les habitants de
                             Paris à atteindre leurs objectifs immobiliers depuis 2000. Que vous
                             cherchiez à financer votre première maison ou à gérer un portefeuille d'investissements
                             immobiliers, nos courtiers sont
@@ -317,20 +300,16 @@
                 </dl>
             </div>
         </div>
-    </div>
+    </section>
 
     <!--Localisation-->
-    <div class="py-8 cta-section bg-neutral-100 z-0 sm:py-8">
+    <section class="py-8 cta-section bg-neutral-100 z-0 sm:py-8">
         <div class="mx-auto max-w-2xl py-8 text-center">
-            <h2 class="text-base/7 font-semibold text-indigo-600">Verifiez sur la carte</h2>
-            <h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">Notre localisation</h2>
+            <h2 class="text-base font-semibold text-indigo-600">Vérifiez sur la carte</h2>
+            <h3 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">Notre localisation</h3>
         </div>
         <div class="h-[500px] z-0 rounded-md border border-gray-300 my-2 mb-4 px-4 mx-auto max-w-6xl" id="map"></div>
-    
-    
-    
-    </div>
-    
+    </section>
     
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
@@ -353,9 +332,7 @@
 
     </script>
 
-
-
-       <!-- Footer -->
+    <!-- Footer -->
     <footer class="bg-gray-100 dark:bg-gray-900">
         <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
             <div class="flex justify-center text-teal-600 dark:text-teal-300">
@@ -370,13 +347,13 @@
                 <li>
                     <a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
                         href="./index.html">
-                        Acueil
+                        Accueil
                     </a>
                 </li>
                 <li>
                     <a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
                         href="./about.html">
-                        A propos
+                        À propos
                     </a>
                 </li>
 
