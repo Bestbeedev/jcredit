@@ -47,16 +47,20 @@ animations.forEach(({ element, x = 0, y = 0 }) => {
 
 // Ajoute un écouteur d'événement pour le chargement du DOM
 document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll(".nav-link");
+    const links = document.querySelectorAll(".nav-link, .nav-link-mobile");
 
     // Vérifier quelle page est active au chargement
     function setActiveLink() {
         const currentPage = window.location.pathname;
         links.forEach(link => {
             if (link.getAttribute("href") === currentPage) {
-                link.classList.add("active-link");
+                if (link.classList.contains("nav-link")) {
+                    link.classList.add("active-link");
+                } else if (link.classList.contains("nav-link-mobile")) {
+                    link.classList.add("active-link-mobile");
+                }
             } else {
-                link.classList.remove("active-link");
+                link.classList.remove("active-link", "active-link-mobile");
             }
         });
     }
@@ -64,8 +68,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // Détecter le clic et changer l'effet
     links.forEach(link => {
         link.addEventListener("click", function () {
-            links.forEach(l => l.classList.remove("active-link"));
-            this.classList.add("active-link");
+            links.forEach(l => l.classList.remove("active-link", "active-link-mobile"));
+            if (this.classList.contains("nav-link")) {
+                this.classList.add("active-link");
+            } else if (this.classList.contains("nav-link-mobile")) {
+                this.classList.add("active-link-mobile");
+            }
         });
     });
 
