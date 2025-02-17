@@ -159,6 +159,13 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       document.body.style.top = "0px";
     }, 1000);
+
+    // Ne pas traduire "canada-credit"
+    document.querySelectorAll("*").forEach((node) => {
+      if (node.nodeType === Node.TEXT_NODE && node.textContent.toLowerCase().includes("canada-credit")) {
+        node.textContent = node.textContent.replace(/canada-credit/g, "canada-credit");
+      }
+    });
   }
 
   // Appliquer la langue sauvegardée au chargement de la page
@@ -196,22 +203,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
-// document.addEventListener("DOMContentLoaded", function () {
-//     // Cibler l'élément <html>
-//     const htmlElement = document.documentElement;
-
-//     // Supprimer les attributs indésirables
-//     function cleanHtmlAttributes() {
-//         htmlElement.removeAttribute("bbai-tooltip-injected"); // Supprime l'attribut
-//         htmlElement.setAttribute("bbai-tooltip-injected", "false"); // Le remet à false si nécessaire
-//         htmlElement.classList.remove("translated-ltr", "translated-rtl"); // Supprime les classes Google Translate
-//     }
-
-//     // Observer les changements pour éviter que Google Translate le réinjecte
-//     const observer = new MutationObserver(cleanHtmlAttributes);
-//     observer.observe(htmlElement, { attributes: true, attributeFilter: ['class', 'bbai-tooltip-injected'] });
-
-//     // Exécuter la fonction immédiatement
-//     cleanHtmlAttributes();
-// });
