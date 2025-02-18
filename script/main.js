@@ -38,7 +38,7 @@ animations.forEach(({ element, x = 0, y = 0 }) => {
         ease: "power4.out",
         scrollTrigger: {
             trigger: element,
-            start: "top 80%",
+            start: "top 90%",
             end: "+=500",
             scrub: true
         }
