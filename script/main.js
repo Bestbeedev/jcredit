@@ -111,9 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  const selects = document.querySelectorAll(
-    "#language-select, #language-select-1"
-  );
+  const selects = document.querySelectorAll("#language-select, #language-select-1");
   let retryCount = 0; // Compteur de tentatives
   const maxRetries = 10; // Limite de tentatives pour éviter la boucle infinie
 
@@ -129,16 +127,11 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     } else {
       if (retryCount < maxRetries) {
-        console.warn(
-          "Google Translate n'est pas encore chargé... Tentative",
-          retryCount + 1
-        );
+        console.warn("Google Translate n'est pas encore chargé... Tentative", retryCount + 1);
         retryCount++;
         setTimeout(() => changeLanguage(lang), 500); // Réessaie après 500ms
       } else {
-        console.error(
-          "Google Translate ne s'est pas chargé après plusieurs tentatives."
-        );
+        console.error("Google Translate ne s'est pas chargé après plusieurs tentatives.");
       }
       return;
     }
@@ -146,50 +139,40 @@ document.addEventListener("DOMContentLoaded", function () {
     // Synchroniser les selects
     selects.forEach((select) => {
       select.value = lang;
-    });
-
-    // Supprimer le ruban et les popups de Google Translate
-    setTimeout(() => {
-      document
-        .querySelectorAll(
-          ".goog-te-banner-frame, .goog-tooltip, .goog-te-balloon-frame"
-        )
-        .forEach((el) => {
-          el.remove();
-        });
-      document.body.style.top = "0px";
-    }, 1000);
-
-    // Ne pas traduire "canada-credit"
-    document.querySelectorAll("*").forEach((node) => {
-      if (node.nodeType === Node.TEXT_NODE && node.textContent.toLowerCase().includes("canada-credit")) {
-        node.textContent = node.textContent.replace(/canada-credit/g, "canada-credit");
-      }
+      // Mettre à jour l'attribut selected de l'option correspondante
+      select.querySelectorAll("option").forEach((option) => {
+        option.selected = option.value === lang;
+      });
     });
   }
 
   // Appliquer la langue sauvegardée au chargement de la page
   const savedLanguage = localStorage.getItem("preferredLanguage");
   if (savedLanguage) {
-    setTimeout(() => changeLanguage(savedLanguage), 500); // Petit délai pour éviter la boucle
+    // Synchroniser les selects avec la langue sauvegardée
+    selects.forEach((select) => {
+      select.value = savedLanguage;
+      select.querySelectorAll("option").forEach((option) => {
+        option.selected = option.value === savedLanguage;
+      });
+    });
+    changeLanguage(savedLanguage); // Appliquer immédiatement sans délai
   }
 
   // Écouter le changement sur les selects
   selects.forEach((select) => {
     select.addEventListener("change", (e) => {
       changeLanguage(e.target.value);
+      // Rafraîchir la page pour synchroniser le choix de la langue
+      location.reload();
     });
   });
 
   // Supprimer le bandeau et les tooltips de Google Translate
   function removeGoogleTranslateUI() {
-    document
-      .querySelectorAll(
-        ".goog-te-banner-frame, .goog-tooltip, .goog-te-balloon-frame"
-      )
-      .forEach((el) => {
-        el.remove();
-      });
+    document.querySelectorAll(".goog-te-banner-frame, .goog-tooltip, .goog-te-balloon-frame").forEach((el) => {
+      el.remove();
+    });
     document.body.style.top = "0px"; // Empêcher Google de décaler la page
   }
 
